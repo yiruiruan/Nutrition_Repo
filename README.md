@@ -1,6 +1,8 @@
-# Image_Repo
+# Image/Nutrition_Repo
 
 Build with: Python, Flask, SQL, HTML
+
+This can be used to find nutrition information about a specific type of food and help with having a good diet.
 
 Instructions to setup on Linux based Machines:
 1. Go to imgrepo folder
