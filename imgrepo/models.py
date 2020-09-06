@@ -1,8 +1,8 @@
 from app import db
 
 
-class Artist(db.Model):
-    __tablename__ = "artists"
+class ImageName(db.Model):
+    __tablename__ = "imagenames"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
@@ -21,6 +21,6 @@ class Album(db.Model):
     publisher = db.Column(db.String)
     media_type = db.Column(db.String)
 
-    artist_id = db.Column(db.Integer, db.ForeignKey("artists.id"))
-    artist = db.relationship("Artist", backref=db.backref(
+    imagename_id = db.Column(db.Integer, db.ForeignKey("imagenames.id"))
+    imagename = db.relationship("ImageName", backref=db.backref(
         "albums", order_by=id), lazy=True)

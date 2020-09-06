@@ -3,18 +3,18 @@ from sqlalchemy import Column, Date, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
-engine = create_engine('sqlite:///mymusic.db', echo=True)
+engine = create_engine('sqlite:///nutrition.db', echo=True)
 Base = declarative_base()
 
 
-class Artist(Base):
-    __tablename__ = "artists"
+class ImageName(Base):
+    __tablename__ = "imagenames"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
 
     def __repr__(self):
-        return "<Artist: {}>".format(self.name)
+        return "<ImageName: {}>".format(self.name)
 
 
 class Album(Base):
@@ -27,8 +27,8 @@ class Album(Base):
     publisher = Column(String)
     media_type = Column(String)
 
-    artist_id = Column(Integer, ForeignKey("artists.id"))
-    artist = relationship("Artist", backref=backref(
+    imagename_id = Column(Integer, ForeignKey("imagenames.id"))
+    imagename = relationship("ImageName", backref=backref(
         "albums", order_by=id))
 
 

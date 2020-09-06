@@ -4,7 +4,7 @@ from app import app
 from db_setup import init_db, db_session
 from forms import MusicSearchForm, AlbumForm
 from flask import flash, render_template, request, redirect
-from models import Album, Artist
+from models import Album, ImageName
 from tables import Results
 
 init_db()
@@ -60,10 +60,10 @@ def save_changes(album, form, new=False):
     """
     # Get data from form and assign it to the correct attributes
     # of the SQLAlchemy table object
-    artist = Artist()
-    artist.name = form.artist.data
+    imagename = ImageName()
+    imagename.name = form.imagename.data
 
-    album.artist = artist
+    album.imagename = imagename
     album.title = form.title.data
     album.release_date = form.release_date.data
     album.publisher = form.publisher.data

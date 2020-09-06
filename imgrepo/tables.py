@@ -2,7 +2,7 @@ from flask_table import Table, Col, LinkCol
 
 class Results(Table):
     id = Col('Id', show=False)
-    artist = Col('Artist')
+    imagename = Col('ImageName')
     title = Col('Title')
     release_date = Col('Release Date')
     publisher = Col('Publisher')

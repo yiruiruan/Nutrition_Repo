@@ -1,11 +1,11 @@
 <doctype html>
-<title>New Album - Flask Music Database</title>
+<title>New Album - Flask Nutrition Database</title>
 <h2>New Album</h2>
 
 {% from "_formhelpers.html" import render_field %}
 <form method=post>
     <dl>
-        {{ render_field(form.artist) }}
+        {{ render_field(form.imagename) }}
         {{ render_field(form.title) }}
         {{ render_field(form.release_date) }}
         {{ render_field(form.publisher) }}

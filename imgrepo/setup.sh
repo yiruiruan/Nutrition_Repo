@@ -1,6 +1,6 @@
 #!/bin/bash
 pip install virtualenv
-virtualenv imgdb
+virtualenv nutritiondb
 source bin/activate
 pip install flask
 pip install flask-sqlalchemy

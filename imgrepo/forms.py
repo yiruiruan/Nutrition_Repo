@@ -3,7 +3,7 @@
 from wtforms import Form, StringField, SelectField, validators
 
 class MusicSearchForm(Form):
-    choices = [('Artist', 'Artist'),
+    choices = [('ImageName', 'ImageName'),
                ('Album', 'Album'),
                ('Publisher', 'Publisher')]
     select = SelectField('Search for music:', choices=choices)
@@ -15,7 +15,7 @@ class AlbumForm(Form):
                    ('CD', 'CD'),
                    ('Cassette Tape', 'Cassette Tape')
                    ]
-    artist = StringField('Artist')
+    imagename = StringField('ImageName')
     title = StringField('Title')
     release_date = StringField('Release Date')
     publisher = StringField('Publisher')
