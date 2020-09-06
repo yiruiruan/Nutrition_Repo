@@ -22,10 +22,10 @@ class Album(Base):
     __tablename__ = "albums"
 
     id = Column(Integer, primary_key=True)
-    title = Column(String)
-    release_date = Column(String)
-    publisher = Column(String)
-    media_type = Column(String)
+    calories = Column(String)
+    sugar = Column(String)
+    protein = Column(String)
+    diet_type = Column(String)
 
     imagename_id = Column(Integer, ForeignKey("imagenames.id"))
     imagename = relationship("ImageName", backref=backref(

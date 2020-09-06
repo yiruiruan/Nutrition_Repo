@@ -38,10 +38,10 @@ def search_results(search):
         return render_template('results.html', table=table)
 
 
-@app.route('/new_album', methods=['GET', 'POST'])
-def new_album():
+@app.route('/new_item', methods=['GET', 'POST'])
+def new_item():
     """
-    Add a new album
+    Add a new item
     """
     form = AlbumForm(request.form)
 
@@ -64,10 +64,10 @@ def save_changes(album, form, new=False):
     imagename.name = form.imagename.data
 
     album.imagename = imagename
-    album.title = form.title.data
-    album.release_date = form.release_date.data
-    album.publisher = form.publisher.data
-    album.media_type = form.media_type.data
+    album.calories = form.calories.data
+    album.sugar = form.sugar.data
+    album.protein = form.protein.data
+    album.diet_type = form.diet_type.data
 
     if new:
         # Add the new album to the database

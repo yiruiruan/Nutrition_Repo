@@ -3,8 +3,8 @@ from flask_table import Table, Col, LinkCol
 class Results(Table):
     id = Col('Id', show=False)
     imagename = Col('ImageName')
-    title = Col('Title')
-    release_date = Col('Release Date')
-    publisher = Col('Publisher')
-    media_type = Col('Media')
+    calories = Col('Calories/100g')
+    sugar = Col('sugar/100g')
+    protein = Col('Protein/100g')
+    diet_type = Col('Diet')
     edit = LinkCol('Edit', 'edit', url_kwargs=dict(id='id'))

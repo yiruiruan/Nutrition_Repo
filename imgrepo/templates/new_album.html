@@ -1,15 +1,15 @@
 <doctype html>
-<title>New Album - Flask Nutrition Database</title>
-<h2>New Album</h2>
+<title>New Item - Flask Nutrition Database</title>
+<h2>New Item</h2>
 
 {% from "_formhelpers.html" import render_field %}
 <form method=post>
     <dl>
         {{ render_field(form.imagename) }}
-        {{ render_field(form.title) }}
-        {{ render_field(form.release_date) }}
-        {{ render_field(form.publisher) }}
-        {{ render_field(form.media_type) }}
+        {{ render_field(form.calories) }}
+        {{ render_field(form.sugar) }}
+        {{ render_field(form.protein) }}
+        {{ render_field(form.diet_type) }}
     </dl>
     <p><input type=submit value=Submit>
 </form>

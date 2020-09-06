@@ -4,19 +4,19 @@ from wtforms import Form, StringField, SelectField, validators
 
 class MusicSearchForm(Form):
     choices = [('ImageName', 'ImageName'),
-               ('Album', 'Album'),
-               ('Publisher', 'Publisher')]
-    select = SelectField('Search for music:', choices=choices)
+               ('Sugar', 'Sugar'),
+               ('Protein', 'Protein')]
+    select = SelectField('Search for item:', choices=choices)
     search = StringField('')
 
 
 class AlbumForm(Form):
-    media_types = [('Digital', 'Digital'),
-                   ('CD', 'CD'),
-                   ('Cassette Tape', 'Cassette Tape')
+    diet_types = [('None', 'None'),
+                   ('Vegan', 'Vegan'),
+                   ('Halal', 'Halal')
                    ]
     imagename = StringField('ImageName')
-    title = StringField('Title')
-    release_date = StringField('Release Date')
-    publisher = StringField('Publisher')
-    media_type = SelectField('Media', choices=media_types)
+    calories = StringField('Calories/100g')
+    sugar = StringField('Sugar/100g')
+    protein = StringField('Protein/100g')
+    diet_type = SelectField('Diet', choices=diet_types)
