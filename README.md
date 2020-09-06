@@ -4,6 +4,8 @@ Build with: Python, Flask, SQL, HTML
 
 This can be used to find nutrition information about a specific type of food and help with having a good diet.
 
+Available Functionalities: Add, Edit, View, and Search (currently displays the entire database)
+
 Instructions to setup on Linux based Machines:
 1. Go to imgrepo folder
 2. To setup the environment, run bash setup.sh
